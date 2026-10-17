@@ -13,6 +13,6 @@ const tvHardware = new GeekMagic.GeekMagicTV({
 
 // 2. Start it up
 (async function run() {
-    stdClock.callback(tvHardware);
-    setInterval(stdClock.callback.bind(tvHardware), ms(`1 minute`));
+    await stdClock.callback(tvHardware);
+    setInterval(stdClock.callback.bind(null,tvHardware), ms(`1 minute`));
 }());
